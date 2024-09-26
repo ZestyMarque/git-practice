@@ -43,25 +43,25 @@ sudo apt install nginx
 
 ```nginx
 server {
-	listen 80;
-	server_name proj1.example.com;
+    listen 80;
+    server_name proj1.example.com;
 
-	location / {
-    	return 301 https://$host$request_uri;
-	}
+    location / {
+        return 301 https://$host$request_uri;
+    }
 }
 
 server {
-	listen 443 ssl;
-	server_name proj1.example.com;
+    listen 443 ssl;
+    server_name proj1.example.com;
 
-	ssl_certificate /etc/nginx/ssl/nginx.crt;
-	ssl_certificate_key /etc/nginx/ssl/nginx.key;
+    ssl_certificate /etc/nginx/ssl/nginx.crt;
+    ssl_certificate_key /etc/nginx/ssl/nginx.key;
 
-	location / {
-    	root /var/www/proj1;
-    	index index.html;
-	}
+    location / {
+        root /var/www/proj1;
+        index index.html;
+    }
 }
 ```
 
@@ -71,25 +71,25 @@ server {
 
 ```nginx
 server {
-	listen 80;
-	server_name proj2.example.com;
+    listen 80;
+    server_name proj2.example.com;
 
-	location / {
-    	return 301 https://$host$request_uri;
-	}
+    location / {
+        return 301 https://$host$request_uri;
+    }
 }
 
 server {
-	listen 443 ssl;
-	server_name proj2.example.com;
+    listen 443 ssl;
+    server_name proj2.example.com;
 
-	ssl_certificate /etc/nginx/ssl/nginx.crt;
-	ssl_certificate_key /etc/nginx/ssl/nginx.key;
+    ssl_certificate /etc/nginx/ssl/nginx.crt;
+    ssl_certificate_key /etc/nginx/ssl/nginx.key;
 
-	location / {
-    	root /var/www/proj2;
-    	index index.html;
-	}
+    location / {
+        root /var/www/proj2;
+        index index.html;
+    }
 }
 ```
 
